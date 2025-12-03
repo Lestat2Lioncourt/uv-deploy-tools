@@ -125,6 +125,21 @@ uv run python deploy.py --list-servers
 uv run python deploy.py --list-packages
 ```
 
+## 🖥️ Graphical Interface (New in v0.2.0!)
+
+Launch the GUI with:
+```bash
+uv run python deploy_gui.py
+```
+
+**GUI Features:**
+- ✅ Visual project and server selection with checkboxes
+- ✅ Secure password input with masked dialogs
+- ✅ Real-time deployment logs
+- ✅ Built-in configuration editor for servers.yaml
+- ✅ Desktop notifications on completion
+- ✅ Group deployments with one click
+
 ### Project Structure
 
 Your Python projects should follow this structure:

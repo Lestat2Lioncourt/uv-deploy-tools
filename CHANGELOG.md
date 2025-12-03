@@ -32,3 +32,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 Made with  by Laurent Alary (DeTraX)
+## [0.2.0] - 2024-12-03
+
+###  New Features
+- **GUI Interface**: Complete graphical interface with CustomTkinter
+- **Secure Password Input**: Masked password dialog boxes
+- **Configuration Editor**: Edit servers.yaml directly from the GUI
+- **Windows Notifications**: Desktop notifications on deployment completion
+- **Real-time Logs**: Live deployment progress in the interface
+- **Group Selection**: Deploy to server groups from the GUI
+
+###  Bug Fixes
+- Fixed escape sequence warning in Linux chmod command
+- Fixed BOM character encoding issues in output
+
+###  Documentation
+- Updated README with GUI usage instructions
+- Added GUI screenshot (if available)
+

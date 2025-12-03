@@ -563,7 +563,7 @@ read
             chmod_commands = [
                 f'cd "{final_dir}" && chmod +x uv 2>/dev/null',
                 f'cd "{final_dir}" && chmod +x *.sh 2>/dev/null',
-                f'cd "{final_dir}" && find python-* -type d -name bin -exec chmod -R +x {{}} \; 2>/dev/null',
+                f'cd "{final_dir}" && find python-* -type d -name bin -exec chmod -R +x {{}} \\; 2>/dev/null',
                 f'cd "{final_dir}" && chmod -R +x python-*/bin/* 2>/dev/null'
             ]
             
@@ -600,7 +600,10 @@ read
         if output:
             for line in output.splitlines():
                 if line.strip():
-                    console.print(f"  [dim]{line}[/dim]")
+                    # Nettoyer les caractères BOM
+                            line_clean = line.replace('\ufeff', '').strip()
+                            if line_clean:
+                                console.print(f"  [dim]{line_clean}[/dim]")
         
         return True
 
@@ -846,6 +849,9 @@ def deploy(project, server, group, list_projects, list_packages, list_servers, p
 
 if __name__ == "__main__":
     deploy()
+
+
+
 
 
 
