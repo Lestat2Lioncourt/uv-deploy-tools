@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-Made with  by Laurent Alary (DeTraX)
+Made with  by Laurent Alary (Lestat2Lioncourt)
 ## [0.2.0] - 2024-12-03
 
 ###  New Features
