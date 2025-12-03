@@ -40,3 +40,9 @@ logs/
 *.bak
 deploy_*.py
 fix_*.txt
+# Temporary fix files
+fix_*.txt
+*_backup.py
+*_backup_*.py
+deploy_passwords.txt
+transfer_*.txt

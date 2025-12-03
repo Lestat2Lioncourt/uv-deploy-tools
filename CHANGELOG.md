@@ -48,5 +48,4 @@ Made with  by Laurent Alary (Lestat2Lioncourt)
 
 ###  Documentation
 - Updated README with GUI usage instructions
-- Added GUI screenshot (if available)
 
