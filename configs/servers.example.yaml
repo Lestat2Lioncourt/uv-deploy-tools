@@ -1,0 +1,32 @@
+﻿# Example server configuration for UV Deploy Tools
+# Copy this file to servers.yaml and customize for your servers
+
+servers:
+  example-windows:
+    host: 192.168.1.100
+    port: 22
+    os: windows
+    user: your-username
+    package_path: C:\temp\packages     # Where to upload packages
+    deploy_path: C:\apps               # Where to install applications
+    cleanup_package: true              # Remove package after deployment
+
+  example-linux:
+    host: server.example.com
+    port: 22
+    os: linux
+    user: deploy
+    package_path: /tmp/packages
+    deploy_path: /opt/applications
+    cleanup_package: false
+
+groups:
+  production: [prod-1, prod-2]
+  staging: [staging-linux, staging-windows]
+
+defaults:
+  port: 22
+  os: windows
+  cleanup_package: true
+  python_version: "3.12"
+  uv_download_url: "https://github.com/astral-sh/uv/releases/latest/download/uv-x86_64-pc-windows-msvc.zip"

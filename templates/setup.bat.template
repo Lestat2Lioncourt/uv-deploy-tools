@@ -1,0 +1,9 @@
+﻿@echo off
+echo ========================================
+echo Installation de l'environnement Python
+echo ========================================
+echo.
+uv.exe venv --python python-{python_version}\python.exe
+echo.
+echo Environnement cree avec succes!
+echo ========================================

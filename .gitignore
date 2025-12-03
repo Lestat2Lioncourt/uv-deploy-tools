@@ -1,0 +1,42 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# UV
+.python-version
+uv.lock
+
+# Project specific
+cache/
+packages/*.zip
+configs/servers.yaml
+!configs/servers.example.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temp files
+*.tmp
+*.bak
+deploy_*.py
+fix_*.txt
