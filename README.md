@@ -225,7 +225,7 @@ For issues, questions, or suggestions:
 
 ---
 
-**Made with  by Laurent Alary (DeTraX)** | **Powered by UV **
+**Made with  by Laurent Alary (Lestat2Lioncourt)** | **Powered by UV **
 
 
 
