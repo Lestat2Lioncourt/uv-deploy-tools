@@ -41,39 +41,39 @@ A powerful Python deployment automation tool that packages and deploys Python pr
 ##  Installation
 
 1. **Clone the repository**
-\\\ash
+```ash
 git clone https://github.com/Lestat2Lioncourt/uv-deploy-tools.git
 cd uv-deploy-tools
-\\\
+```
 
 2. **Install UV (if not already installed)**
-\\\ash
+```ash
 # Windows
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # Linux/macOS
 curl -LsSf https://astral.sh/uv/install.sh | sh
-\\\
+```
 
 3. **Install dependencies**
-\\\ash
+```ash
 uv venv
 uv sync
-\\\
+```
 
 ##  Configuration
 
-Edit \configs/servers.yaml\ to define your servers:
+Edit `configs/servers.yaml` to define your servers:
 
-\\\yaml
+```yaml
 servers:
   production:
     host: 192.168.1.100
     port: 22
     os: windows
     user: deploy
-    package_path: D:\packages        # Where to upload packages
-    deploy_path: C:\apps             # Where to install apps
+    package_path: D:`packages        # Where to upload packages
+    deploy_path: C:`apps             # Where to install apps
     cleanup_package: true             # Remove package after deployment
 
   staging-linux:
@@ -94,48 +94,48 @@ defaults:
   os: windows
   cleanup_package: true
   python_version: "3.12"
-\\\
+```
 
 ##  Usage
 
 ### Basic Commands
 
 **Deploy a project to a single server:**
-\\\ash
+```ash
 uv run python deploy.py -p my-project -s production
-\\\
+```
 
 **Deploy to a group of servers:**
-\\\ash
+```ash
 uv run python deploy.py -p my-project -g all-prod
-\\\
+```
 
 **List available projects:**
-\\\ash
+```ash
 uv run python deploy.py --list-projects
-\\\
+```
 
 **List configured servers:**
-\\\ash
+```ash
 uv run python deploy.py --list-servers
-\\\
+```
 
 **List created packages:**
-\\\ash
+```ash
 uv run python deploy.py --list-packages
-\\\
+```
 
 ### Project Structure
 
 Your Python projects should follow this structure:
-\\\
+```
 my-project/
  main.py              # Entry point (required)
  pyproject.toml       # Project metadata (required)
  .python-version      # Python version (optional, e.g., "3.12")
  requirements.txt     # Dependencies (optional)
  src/                 # Your source code
-\\\
+```
 
 ##  Deployment Process
 
@@ -167,9 +167,9 @@ If the requested Python version isn't available for the target platform, UV Depl
 
 ### Package Naming Convention
 Packages are automatically named with semantic versioning:
-\\\
+```
 project-name-v1.2.3-20241203.zip
-\\\
+```
 
 ### Multiple Deployment Paths
 - **package_path**: Temporary location for package upload
@@ -181,7 +181,7 @@ project-name-v1.2.3-20241203.zip
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 ### Development Setup
-\\\ash
+```ash
 # Clone your fork
 git clone https://github.com/Lestat2Lioncourt/uv-deploy-tools.git
 cd uv-deploy-tools
@@ -192,7 +192,7 @@ uv sync
 
 # Make your changes and test
 uv run python deploy.py --help
-\\\
+```
 
 ##  License
 
@@ -226,6 +226,7 @@ For issues, questions, or suggestions:
 ---
 
 **Made with  by Laurent Alary (DeTraX)** | **Powered by UV **
+
 
 
 
